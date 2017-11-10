@@ -15,4 +15,4 @@ plt.legend()
 
 plt.tight_layout()
 
-plt.savefig("build/static1.pdf")
+plt.savefig("build/plot.pdf")
