@@ -8,38 +8,40 @@ Es wird ein Stab der Länge L und Querschnittsfläche A betrachtet.
 Er besitzt die Materialdichte $\rho$ und spezifische Wärme $c$
 Die Wärmemege,
 \begin{equation}
-  dQ =-  \kappa \symbf{A} \frac{\partial\symbf{T}}{\partial x} dt
+  dQ =-  \kappa A \frac{\partial T}{\partial x} dt ,
 \end{equation}
-, fließt in der Zeit dt durch die Querschnittsfläche A.
+fließt in der Zeit dt durch die Querschnittsfläche A.
 Das negative Vorzeichen deutet an, dass der Wärmestrom in Richtung abnehmender Temperatur fließt.
 Leitet man dQ nach der Zeit ab, so erhält man die Wärmestromdichte
 \begin{equation}
- j_\omega =- \kappa \frac{\partial \symbf{T}}{\partial x}
+ j_\omega =- \kappa \frac{\partial T}{\partial x}
 \end{equation}
 Aus der Kontinuitätsgleichung ergibt sich die eindimensionale Wärmeleistungsgleichung
 \begin{equation}
-  \frac{\partial \symbf{T}}{\partial t} = \frac {\kappa}{\rho} \frac{\partial^2  \symbf{T}}{\partial x^2}  .
+  \frac{\partial T}{\partial t} = \frac {\kappa}{\rho} \frac{\partial^2  T}{\partial x^2} .
 \end{equation}
 Sie beschreibt räumliche und Zeitliche entwicklung der Temperaturverteilung.
 Die Temperaturleitfähigkeit
 \begin{equation}
-  \sigma_\symbf{T} = \frac{\kappa}{\rho c}
+  \sigma_T = \frac{\kappa}{\rho c}
 \end{equation}
 gibt die Geschwindigkeit an mit welcher sich eine Temperaturdifferenz ausgleicht.
 \\
 Eine Temperaturwelle der Form,
 \begin{equation}
-  \symbf{T(x,t)} = \symbf{T_max}e^{\sqrt{\frac{\omega\rho c}{2 \kappa}}x} \cos(\omega t - \sqrt{\frac{\omega\rho c}{2 \kappa}}x)
+  T\left(x,t\right) = T_\text{max}e^{\sqrt{\frac{\omega\rho c}{2 \kappa}}x} \cos\left(\omega t - \sqrt{\frac{\omega\rho c}{2 
+\kappa}}x\right) ,
 \end{equation}
-, entsteht in einem sehr langen Stab durch periodischen Temperaturwechsel.
+entsteht in einem sehr langen Stab durch periodischen Temperaturwechsel.
 Ihre Phasengeschwindigkeit lautet:
 \begin{equation}
   \upsilon = \sqrt{\frac{2\kappa\omega}{\rho c}}
 \end{equation}
-Für die Wärmeleitfähigkeit erhält man, mit  $\omega=\frac{2\pi}{\symbf{T^*}}$ und $\phi=\frac{2\pi\delta t}{\symbf{T^*}}$,
+Für die Wärmeleitfähigkeit erhält man, mit  $\omega=\frac{2\pi}{T^*}$ und $\phi=\frac{2\pi\delta t}{T^*}$,
 \begin{equation}
-  \kappa = \frac{\rho c(\delta x)^2}{2\delta t ln(A_{nah}/A_{fern})}  .
+  \kappa = \frac{\rho c\left(\delta x\right)^2}{2\delta t ln\left(A_\text{nah}/A_\text{fern}\right)}  .
 \end{equation}
-Dabei erhält man die Dämpfung aus dem Amplitudenverhältniss $A_{nah}$ und $A_{fern}$ der Welle an zwei Messpunkten $x_{nah}$ und $x_{fern}$.
+Dabei erhält man die Dämpfung aus dem Amplitudenverhältniss $A_\text{nah}$ und $A_\text{fern}$ der Welle an zwei Messpunkten 
+$x_\text{nah}$ und $x_\text{fern}$.
 $\delta t$ ist die Phasendifferenz der Welle zwischen den beiden Messpunkten und $\delta x$ ist der Abstand zwischen diesen.
-\cite{sample}
+%\cite{sample}

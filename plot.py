@@ -19,5 +19,6 @@ plt.savefig("build/plot.pdf")
 plt.clf()
 
 #data = np.genfromtxt('content/dynamische_messung1.txt', unpack=True)
+#data = np.genfromtxt('content/dynamische_messung2.txt', unpack=True)
 
 
