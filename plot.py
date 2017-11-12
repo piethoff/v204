@@ -1,31 +1,39 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 data = np.genfromtxt('content/statische_messung.txt', unpack=True)
 
 plt.subplot(1, 2, 1)
 plt.plot(data[0], data[1], label="Temperatur 1")
 plt.plot(data[0], data[4], label="Temperatur 4")
+plt.xlabel(r'$t / \mathrm{s}$')
+plt.ylabel(r"$T/^\circ\mathrm{C}$")
 plt.legend()
 
 plt.subplot(1, 2, 2)
 plt.plot(data[0], data[5], label="Temperatur 5")
 plt.plot(data[0], data[8], label="Temperatur 8")
+plt.xlabel(r"$t/\mathrm{s}$")
+plt.ylabel(r"$T/^\circ\mathrm{C}$")
 plt.legend()
-
 plt.tight_layout()
 
 plt.savefig("build/plot.pdf")
 plt.clf()
 
+
 plt.subplot(1, 2, 1)
 plt.plot(data[0], data[7]-data[8], label="Edelstahl")
+plt.xlabel(r"$t/\mathrm{s}$")
+plt.ylabel(r"$T/^\circ\mathrm{C}$")
 plt.legend()
 
 plt.subplot(1, 2, 2)
 plt.plot(data[0], data[2]-data[1], label="Messing")
 plt.legend()
-
+plt.xlabel(r"$t/\mathrm{s}$")
+plt.ylabel(r"$T/^\circ\mathrm{C}$")
 plt.tight_layout()
 
 plt.savefig("build/plot2.pdf")
@@ -33,30 +41,73 @@ plt.clf()
 
 
 data = np.genfromtxt('content/dynamische_messung1.txt', unpack=True)
-
-plt.subplot(1, 2, 1)
-plt.title("Temperaturverlauf für Messing")
+fig = plt.figure()
+fig = fig.add_subplot(1,1,1)
 plt.plot(data[0], data[1], label="Temperatur 1")
 plt.plot(data[0], data[2], label="Temperatur 2")
+plt.ylim(19, 37)
+plt.xlabel(r"$t/\mathrm{s}$")
+plt.ylabel(r"$T/^\circ\mathrm{C}$")
+maj = np.arange(0, data[0][-1], 40)
+min = np.arange(0, data[0][-1], 10)
+tmaj = np.arange(19, 37, 2)
+tmin = np.arange(19, 37, 1)
+fig.set_xticks(maj)
+fig.set_xticks(min, minor=True)
+fig.set_yticks(tmaj)
+fig.set_yticks(tmin, minor=True)
+fig.grid(which="minor", alpha = 0.3, ls="dashed")
+fig.grid(which="major", alpha = 0.6)
 plt.legend()
-
-plt.subplot(1, 2, 2)
-plt.title("Temperaturverlauf für Aluminium")
-plt.plot(data[0], data[5], label="Temperatur 5")
-plt.plot(data[0], data[6], label="Temperatur 6")
-plt.legend()
-
 plt.tight_layout()
 
 plt.savefig("build/plot3.pdf")
 plt.clf()
 
-
-data = np.genfromtxt('content/dynamische_messung2.txt', unpack=True)
-
-plt.title("Temperaturverlauf für Edelstahl")
-plt.plot(data[0], data[7], label="Temperatur 7")
-plt.plot(data[0], data[8], label="Temperatur 8")
+fig = plt.figure()
+fig = fig.add_subplot(1,1,1)
+plt.plot(data[0], data[5], label="Temperatur 5")
+plt.plot(data[0], data[6], label="Temperatur 6")
+plt.ylim(19, 37)
+plt.xlabel(r"$t/\mathrm{s}$")
+plt.ylabel(r"$T/^\circ\mathrm{C}$")
+maj = np.arange(0, data[0][-1], 40)
+min = np.arange(0, data[0][-1], 10)
+tmaj = np.arange(19, 37, 2)
+tmin = np.arange(19, 37, 1)
+fig.set_xticks(maj)
+fig.set_xticks(min, minor=True)
+fig.set_yticks(tmaj)
+fig.set_yticks(tmin, minor=True)
+fig.grid(which="minor", alpha = 0.3, ls="dashed")
+fig.grid(which="major", alpha = 0.6)
 plt.legend()
 
 plt.savefig("build/plot4.pdf")
+plt.clf()
+
+
+data = np.genfromtxt('content/dynamische_messung2.txt', unpack=True)
+
+fig = plt.figure()
+fig = fig.add_subplot(1,1,1)
+plt.plot(data[0], data[7], label="Temperatur 7")
+plt.plot(data[0], data[8], label="Temperatur 8")
+plt.xlabel(r"$t/\mathrm{s}$")
+plt.ylabel(r"$T/^\circ\mathrm{C}$")
+plt.ylim(22, 45)
+maj = np.arange(0, data[0][-1], 200)
+min = np.arange(0, data[0][-1], 50)
+tmaj = np.arange(22, 45, 2)
+tmin = np.arange(22, 45, 1)
+fig.set_xticks(maj)
+fig.set_xticks(min, minor=True)
+fig.set_yticks(tmaj)
+fig.set_yticks(tmin, minor=True)
+fig.grid(which="minor", alpha = 0.3, ls="dashed")
+fig.grid(which="major", alpha = 0.6)
+
+plt.legend()
+plt.tight_layout()
+
+plt.savefig("build/plot5.pdf")
