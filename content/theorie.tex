@@ -8,13 +8,14 @@ Es wird ein Stab der Länge L und Querschnittsfläche A betrachtet.
 Er besitzt die Materialdichte $\rho$ und spezifische Wärme $c$
 Die Wärmemege,
 \begin{equation}
+  \label{eqn:gl1}
     \symup{d}Q =-  \kappa A \frac{\partial T}{\partial x} \symup{d}t ,
 \end{equation}
 fließt in der Zeit dt durch die Querschnittsfläche A.
 Das negative Vorzeichen deutet an, dass der Wärmestrom in Richtung abnehmender Temperatur fließt.
-Leitet man $\symup{d}Q$ nach der Zeit ab, so erhält man die Wärmestromdichte
+Für die Wärmestromdichte gilt,
 \begin{equation}
-    j_\omega =- \kappa \frac{\partial T}{\partial x}
+    j_\omega =- \kappa \frac{\partial T}{\partial x} .
 \end{equation}
 Aus der Kontinuitätsgleichung ergibt sich die eindimensionale Wärmeleistungsgleichung
 \begin{equation}
@@ -42,7 +43,7 @@ Für die Wärmeleitfähigkeit erhält man, mit  $\omega=\frac{2\pi}{T^*}$ und $\
     \kappa = \frac{\rho c\left(\symup{\Delta}x\right)^2}{2 ln\left(A_\text{nah}/A_\text{fern}\right)\symup{\Delta}t}.
     \label{eqn:wleitfaehigkeit}
 \end{equation}
-Dabei erhält man die Dämpfung aus dem Amplitudenverhältniss $A_\text{nah}$ und $A_\text{fern}$ der Welle an zwei Messpunkten 
+Dabei erhält man die Dämpfung aus dem Amplitudenverhältniss $A_\text{nah}$ und $A_\text{fern}$ der Welle an zwei Messpunkten
 $x_\text{nah}$ und $x_\text{fern}$.
-$\symup{\Delta}t$ ist die Phasendifferenz der Welle zwischen den beiden Messpunkten und $\symup{\Delta}x$ ist der Abstand zwischen 
+$\symup{\Delta}t$ ist die Phasendifferenz der Welle zwischen den beiden Messpunkten und $\symup{\Delta}x$ ist der Abstand zwischen
 diesen.

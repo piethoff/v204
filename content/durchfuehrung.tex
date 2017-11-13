@@ -11,6 +11,23 @@ untersucht. Die Thermoelemente haben jeweils den Abstand \SI{30}{\milli\meter}.
 Dabei heizt das Peltierelement die vier Metallstäbe simultan und die Temperatur wird an 8
 verschiedenen Messpunkten, je zwei pro Stab, mithilfe vom Thermoelementen gemessen. Die
 Messwerte werden über ein Temperature Array mit einem Datenlogger aufgezeichnet.
+Die Maße der zu untersuchenden Metallstäbe sind:
+\begin{table}
+    \centering
+    \caption{Temperaturen nach 700 Sekunden.}
+    \label{tab:werte}
+    \sisetup{table-format=1.2}
+    \begin{tabular}{c c S S S}
+        \toprule
+        {Material} & {Abmessungen$/\si{\centi\meter}$} &{$\rho/\si{\kg\per\meter\cubed}$} &{$c/\si{\joule\per\kg\per\kelvin}$} &{$\kappa/\si{\watt\per\meter\kelvin}$} \\
+        \midrule
+        Messing(breit) & 9 x 1.2 x 0.4 & 8520 & 385 & 100 \\
+        Messing(schmal) & 9 x 0.7 x 0.4 & 8520 & 385 & 100 \\
+        Aluminium(breit) & 9 x 1.2 x 0.4 & 2800 & 830 & 235 \\
+        Edelstahl(breit) & 9 x 1.2 x 0.4 & 8000 & 400 & 15 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 %
 \subsection{Statische Methode}
 \label{sec:statische Methode}
@@ -21,9 +38,9 @@ Anschließend werden die Stäbe durch das Peltierelement gekühlt.
 %
 \subsection{Dynamische Methode}
 \label{sec:dynamische Methode}
-Bei der dynamischen Methode, auch Angström-Verfahren, wird im Gegensatz zur statischen Methode nicht kontinuierlich, 
-sondern periodisch mit $U_\text{P}=\SI{8}{\volt}$ geheizt und gekühlt. 
+Bei der dynamischen Methode, auch Angström-Verfahren, wird im Gegensatz zur statischen Methode nicht kontinuierlich,
+sondern periodisch mit $U_\text{P}=\SI{8}{\volt}$ geheizt und gekühlt.
 Der Datenlogger wird außerdem auf eine Abtastperiode von $\SI{2}{\second}$ gestellt.
 Es ergibt sich innerhalb des Materials eine Temperaturwelle der Form \eqref{eqn:thermowelle}.
-In der ersten Messung wurden zehn Perioden mit einer Periodendauer von $\SI{80}{\second}$ aufgezeichnet, 
+In der ersten Messung wurden zehn Perioden mit einer Periodendauer von $\SI{80}{\second}$ aufgezeichnet,
 in der zweiten Messung wurde etwa eine Stunde lang mit eine Periodendauer von $\SI{400}{\second}$ gemessen.
