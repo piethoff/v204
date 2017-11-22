@@ -19,11 +19,11 @@ Die Maße der zu untersuchenden Metallstäbe sind:
     \sisetup{table-format=1.2}
     \begin{tabular}{c c S S S}
         \toprule
-        {Material} & {Abmessungen$/\si{\centi\meter}$} &{$\rho/\si{\kg\per\meter\cubed}$} &{$c/\si{\joule\per\kg\per\kelvin}$} &{$\kappa/\si{\watt\per\meter\kelvin}$} \\
+        {Material} & {Abmessungen$/\si{\centi\meter}$} &{$\rho/\si{\kg\per\meter\cubed}$} &{$c/\si{\joule\per\kg\per\kelvin}$} &{$\kappa/\si{\watt\per\meter\kelvin}$\cite{waermeleit}} \\
         \midrule
-        Messing (breit) & 9 x 1.2 x 0.4 & 8520 & 385 & 100 \\
-        Messing (schmal) & 9 x 0.7 x 0.4 & 8520 & 385 & 100 \\
-        Aluminium (breit) & 9 x 1.2 x 0.4 & 2800 & 830 & 235 \\
+        Messing (breit) & 9 x 1.2 x 0.4 & 8520 & 385 & 120 \\
+        Messing (schmal) & 9 x 0.7 x 0.4 & 8520 & 385 & 120 \\
+        Aluminium (breit) & 9 x 1.2 x 0.4 & 2800 & 830 & 237 \\
         Edelstahl (breit) & 9 x 1.2 x 0.4 & 8000 & 400 & 15 \\
         \bottomrule
     \end{tabular}
@@ -41,6 +41,6 @@ Anschließend werden die Stäbe durch das Peltierelement gekühlt.
 Bei der dynamischen Methode, auch Angström-Verfahren, wird im Gegensatz zur statischen Methode nicht kontinuierlich,
 sondern periodisch mit $U_\text{P}=\SI{8}{\volt}$ geheizt und gekühlt.
 Der Datenlogger wird außerdem auf eine Abtastperiode von $\SI{2}{\second}$ gestellt.
-Es ergibt sich innerhalb des Materials eine Temperaturwelle der Form \eqref{eqn:thermowelle}.
+Es ergibt sich innerhalb des Materials eine Temperaturwelle wie durch Gleichung \eqref{eqn:thermowelle} beschrieben.
 In der ersten Messung werden zehn Perioden mit einer Periodendauer von $\SI{80}{\second}$ aufgezeichnet,
 in der zweiten Messung ist etwa eine Stunde lang mit einer Periodendauer von $\SI{400}{\second}$ gemessen.
