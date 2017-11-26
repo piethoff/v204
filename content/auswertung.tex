@@ -12,42 +12,43 @@ Auffallend ist, dass alle Graphen nach ungefähr $\SI{1000}{\second}$ ein Platea
 Die Temperatur der beiden Messingstäbe steigt jedoch langsamer an als die des Aluminiumstabes und schneller als die Temperatur des Edelstahlstabes.
 %
 Nach 700 Sekunden lässt sich dies schon beobachten.
+\newpage
 Dort besitzen sie die folgenden Temperaturen:
 \begin{table}[H]
     \centering
     \caption{Temperaturen nach 700 Sekunden.}
     \label{tab:t1}
-    \sisetup{table-format=1.2}
-    \begin{tabular}{S S}
+    \sisetup{table-format=2.1}
+    \begin{tabular}{S[table-format=1.0] S}
         \toprule
         {$T$} & {Temperatur$/\si{\celsius}$} \\
         \midrule
         1 & 27.5 \\
         4 & 26.5 \\
         5 & 28.5 \\
-        8 & 24 \\
+        8 & 24   \\
         \bottomrule
     \end{tabular}
 \end{table}
 %
-Nach Gleichung\eqref{eqn:gl1} lässt sich der Wärmestrom für die 4 Metallstäbe berechnen.
+Nach Gleichung \eqref{eqn:gl1} lässt sich der Wärmestrom für die 4 Metallstäbe berechnen.
 In Tabelle \ref{tab:t3} sind die Wärmeströme für die verschiedenen Metallstäbe aufgetragen.
 %
 \begin{table}[H]
     \centering
     \caption{Wärmestrom in den Stäben.}
     \label{tab:t3}
-    \sisetup{table-format=1.2}
-    \begin{tabular}{S S S S S}
+    \sisetup{table-format=2.2}
+    \begin{tabular}{S[table-format=2.0] S S[table-format=2.3] S S[table-format=2.3]}
         \toprule
-        {Zeit$/\si{\second}$} & {Messing (breit)} & {Messing (schmal)} & {Aluminium (breit)} & {Edelstahl (breit)} \\
+        {Zeit$/\si{\second}$} & {Messing(br.)$/\si{\watt}$} & {Messing(schm.)$/\si{\watt}$} & {Aluminium$/\si{\watt}$} & {Edelstahl$/\si{\watt}$} \\
         \midrule
         50 & -0.29 & -0.209 & -0.56 & -0.050\\
-        55 & -0.30 & -0.21 & -0.55 & -0.054\\
-        60 & -0.30 & -0.21 & -0.54 & -0.060\\
-        65 & -0.30 & -0.21 & -0.52 & -0.063\\
-        70 & -0.30 & -0.21 & -0.51 & -0.066\\
-        75 & -0.29 & -0.209 & -0.5 & -0.070\\
+        55 & -0.30 & -0.21 & -0.55 & -0.054 \\
+        60 & -0.30 & -0.21 & -0.54 & -0.060 \\
+        65 & -0.30 & -0.21 & -0.52 & -0.063 \\
+        70 & -0.30 & -0.21 & -0.51 & -0.066 \\
+        75 & -0.29 & -0.209 & -0.5 & -0.070 \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -96,21 +97,21 @@ Auch hier können die Phasenverschiebung $\symup{\Delta} t = \SI{6.90\pm0.47}{\s
 und die Amplituden $A_5 = \SI{0.9\pm0.07}{\kelvin}$ und $A_6 = \SI{1.89\pm0.07}{\kelvin}$
 abgelesen werden. Es ergibt sich aus Gleichung \eqref{eqn:wleitfaehigkeit},
 \begin{equation*}
-\kappa_\text{Aluminium} = \SI{204.28\pm 19.54}{\watt\per\meter\kelvin} .
+\kappa_\text{Aluminium} = \SI{204.28\pm 19.54}{\watt\per\meter\per\kelvin} .
 \end{equation*}
 %
 In der zweiten Messung wird, bei veränderter Periode, die Wärmeleitfähigkeit
 des Edelstahlstabs bestimmt.
 %
-\begin{figure}[H]
+\begin{figure}
     \centering
     \includegraphics{plot5.pdf}
     \caption{Temperaturverläufe des Edelstahlstabs.}
     \label{fig:plot5}
 \end{figure}
 %
-Aus der Graphik lassen sich $\symup{\Delta} t = \SI{47.75\pm2.29}{\second}$, $A_7 = \SI{3.80\pm0.10}{\kelvin}$
-und $A_8 = \SI{0.91\pm0.09}{\kelvin}$ ermitteln.
+Aus der Graphik lassen sich \mbox{$\symup{\Delta} t = \SI{47.75\pm2.29}{\second}$}, \mbox{$A_7 = \SI{3.80\pm0.10}{\kelvin}$}
+und \mbox{$A_8 = \SI{0.91\pm0.09}{\kelvin}$} ermitteln.
 Es folgt aus Gleichung \eqref{eqn:wleitfaehigkeit}
 \begin{equation*}
   \kappa_\text{Edelstahl} =\SI{21.10\pm 1.13}{\watt\per\meter\kelvin} .
@@ -121,14 +122,14 @@ Zusammenfassend sind die ermittelten Wärmeleitfähigkeiten:
     \centering
     \caption{Wärmeleitfähigkeiten.}
     \label{tab:t2}
-    \sisetup{table-format=3.2(4)}
-    \begin{tabular}{c S}
+    \sisetup{table-format=3.2}
+    \begin{tabular}{c S @{${}\pm{}$} S[table-format=2.2]}
         \toprule
-        {Material}  & {$\kappa/\si[per-mode=reciprocal]{\watt\per\meter\kelvin}$} \\
+        {Material}  & \multicolumn{2}{c}{$\kappa/\si[per-mode=reciprocal]{\watt\kelvin\per\meter}$} \\
         \midrule
-        Messing     & 95.96\pm 5.14 \\
-        Aluminium   & 204.28\pm 19.54 \\
-        Edelstahl   & 21.10\pm 1.13\\
+        Messing     & 95.96     & 5.14 \\
+        Aluminium   & 204.28    & 19.54\\
+        Edelstahl   & 21.10     & 1.13 \\
         \bottomrule
     \end{tabular}
 \end{table}
